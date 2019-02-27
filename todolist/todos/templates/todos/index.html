@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+    <h1>TodoList</h1>
+    <hr>
+    <a href="/todos/add">Add Todo</a>
+</header>
+<ul>
+    {% for todo in todos %}
+    <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
